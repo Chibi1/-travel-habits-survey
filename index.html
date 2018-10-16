@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<style>
+h1 {
+  padding-bottom: 2%;
+  margin: 0;
+  font-size: 45px;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+hr {
+  width: 75%;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-gap: 15px 0px;
+  padding: 10px 0px;
+  background: rgb(212, 212, 212) rgb(141, 130, 130);
+}
+
+.grid1 {
+  text-align: right;
+  padding: 0px 10px;
+  background: white;
+}
+
+.grid2 {
+  text-align: left;
+  padding: 0px 10px;
+  background: white;
+}
+
+label {
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;  
+}
+
+input {
+    font-family: calibri, arial, times-new-roman;
+    font-size: 20px;
+}
+
+.textBox {
+    width: 75%;
+}
+
+select {
+    font-family: calibri, arial, times-new-roman;
+    font-size: 20px;
+}
+
+body {
+  font-family: calibri, arial, times-new-roman;
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 1%;
+  background-color: hsla(194, 80%, 70%, 0.90);
+}
+
+p{
+  padding: 5px;
+  margin: 0px;
+}
+
+section {
+  margin:0 auto;
+  padding: 1% 0%;
+  text-align: centre;
+  background-color: white;
+  width: 80%;
+  font-size: 20px;
+}
+
+textarea
+
+footer {
+  padding-top: 5px;
+}
+
+#footer {
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
+
+<html>
+
+  <head>
+    <meta>
+  <title>Survey Form</title>
+  </head>
+
+<body>
+  
+<header>
+    <h1 id="title">Survey Form</h1>
+</header>
+  
+<section>
+        <p id="description">Let us know how well travelled you are</p><hr>
+        
+        <form id="survey-form">
+            <div class="grid-container">
+                <div class="grid1">
+                    <label for="name" id="name-label">* Name: </label>
+                </div>
+                <div class="grid2">
+                    <input id="name" class="textBox" type="text" placeholder="Enter your Name" width="60px" required>
+                </div>
+          
+                <div class="grid1">
+                    <label for="email" id="email-label">* Email: </label>
+                </div>
+                <div class="grid2">
+                    <input id="email" class="textBox" type="email" placeholder="Enter your Email" required>
+                </div>
+                
+                <div class="grid1">
+                    <label for="age" id="age-label">* Age: </label>
+                </div>
+                <div class="grid2">
+                    <input id="age" class="textBox" type="number" min="0" max="130" placeholder="Age" required>
+                </div>
+        
+                <div class="grid1">
+                    <label for="homeCountry" id="homeCountry-label">* Country of Residence: </label>
+                </div>
+                <div class="grid2">
+                    <input id="homeCountry" class="textBox" type="text" placeholder="Enter your Country of Residence" required>
+                </div>
+        
+                <div class="grid1">
+                    <label for="currentSituation" id="currentSituation-label">Select the option which is most applicable to you right now: </label>
+                </div>
+                <div class="grid2">
+                    <input type="radio" id="student" class="rightTab" name="life-stage" value="student" checked>Student<br>
+                    <input type="radio" id="professional" class="rightTab" name="life-stage" value="professional">Professional<br>
+                    <input type="radio" id="professional-traveller" class="rightTab" name="life-stage" value="professional-traveller">Professional Traveller<br>
+                    <input type="radio" id="retired" class="rightTab" name="life-stage" value="retired">Retired<br>
+                </div>
+                
+                <div class="grid1">
+                    <label for="dropdown" id="dropdown-label">How many continents have you visited?</label>
+                </div>
+                <div class="grid2">
+                    <select id="dropdown" name="number-of-continents">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+        
+                <div class="grid1"> 
+                    <label for="whichContinents" id="whichContinents-label">Select which continents you have visited: </label>
+                </div>
+                <div class="grid2">
+                    <input type="checkbox" id="africa" name="continent" value="africa">Africa<br>
+                    <input type="checkbox" id="antarctica" name="continent" value="antarctica">Antarctica<br>
+                    <input type="checkbox" id="asia" name="continent" value="asia">Asia<br>
+                    <input type="checkbox" id="australia/oceania" name="continent" value="australia/oceania">Australia/Oceania<br>
+                    <input type="checkbox" id="europe" name="continent" value="europe">Europe<br>
+                    <input type="checkbox" id="north america" name="continent" value="north america">North America<br>
+                    <input type="checkbox" id="south america" name="continent" value="south america">South America<br>
+                </div>
+                
+                <div class="grid1">
+                    <label for="favContinent" id="favContinent-label">Select your favourite continent that you have visited: </label>
+                </div>
+                <div class="grid2">
+                    <select id="favContinent" name="number-of-continents">
+                        <option value="africa">Africa</option>
+                        <option value="africa">Africa</option>
+                        <option value="antarctica">Antarctica</option>
+                        <option value="asia">Asia</option>
+                        <option value="australia/oceania">Australia/Oceania</option>
+                        <option value="europe">Europe</option>
+                        <option value="north-america">North America</option>
+                        <option value="south-america">South America</option>
+                    </select>
+                </div>
+                <div class="grid1">
+                    <label for="number" id="number-label">State how many countries you have visited: </label>
+                </div>
+                <div class="grid2">    
+                    <input id="number" type="number" min="1" max="195" placeholder="eg. 10"><br>
+                </div>
+                <div class="grid1">    
+                    <label for="favCountry" id="favCountry-label">Name your favourite country that you have visited: </label>
+                </div>
+                <div class="grid2">    
+                    <input id="favCountry" class="textBox" type="text" placeholder="eg. Germany"><br>
+                </div>
+                <div class="grid1">
+                    <label for="moreTravels" id="moreTravels-label">Are you still planning to do more travelling?: </label>
+                </div>
+                <div class="grid2">
+                    <select id="moreTravels" name="number-of-continents">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="maybe">Maybe</option>
+                        <option value="i-don't-know">I Don't Know</option>
+                    </select><br>
+                </div>
+                <div class="grid1">
+                    <label for="surprise" id="surprise-label">Name the country that surprised you the most: </label>
+                </div>
+                <div class="grid2">   
+                    <input id="surprise" class="textBox" type="text" placeholder="eg. China"><br>
+                </div>
+                <div class="grid1">        
+                    <label for="comments" id="comments-label">Any additional comments?: </label>
+                </div>
+                <div class="grid2">
+                    <textarea id="comments" rows="3" cols="60" placeholder="Enter your comment here..."></textarea><br>
+                </div>
+            </div>   
+        <input id="submit" type="submit">    
+        </form>    
+</section>
+  
+  <footer>
+    <p id="footer">© Chibi Njoku</p>
+  </footer>
+  
+</body>  
+  
+</html>
